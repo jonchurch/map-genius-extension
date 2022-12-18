@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
   "name": "Map Genius Connector",
-  "description": "Connects Map Genius to Biz Spark",
+  "description": "Connects Map Genius to SunBiz",
   "version": "1.0",
   "content_scripts": [
     {
-      "js": ["bizspark.js"],
+      "js": ["sunbiz.js"],
       "matches": ["https://mapgenius.alachuacounty.us/"]
     }
   ]

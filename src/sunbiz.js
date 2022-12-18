@@ -1,9 +1,10 @@
 const OWNER_SELECTOR =
   "#taxParcelTab > #table-7 > tbody > tr:nth-child(3) > td";
-const OWNER_LINK_SELECTOR =
-  "#taxParcelTab > #table-7 > tbody > tr:nth-child(3) > td > a";
+const OWNER_LINK_SELECTOR = `${OWNER_SELECTOR} > a`;
 
-setInterval(() => {
+const UPDATE_INTERVAL = 1000;
+
+const updateLoop = () => {
   const ownerContent = document.querySelector(OWNER_SELECTOR);
   console.log("text beep");
   if (ownerContent) {
@@ -23,4 +24,6 @@ setInterval(() => {
       content.split(" ")[0]
     }</b> <a target="_blank" rel="noopener noreferrer" href="${SEARCH_URL}">${ownerName}</a>`;
   }
-}, 1500);
+};
+
+setInterval(updateLoop, UPDATE_INTERVAL);
